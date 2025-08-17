@@ -4,7 +4,7 @@ import './Tweet.css'
 const MAX_LEN = 140;
 const USERNAME = "OR";
 
-export default function Tweet({ onAdd }) {
+export default function Tweet({ onAdd}) {
   const [text, setText] = useState("");
 
   const remaining = MAX_LEN - text.length;
@@ -16,10 +16,9 @@ export default function Tweet({ onAdd }) {
     if (disabled) return;
 
     const newTweet = {
-      id: Date.now(),
-      username: USERNAME,
-      text: text.trim(),
-      createdTime: new Date().toISOString(),
+      userName: USERNAME,
+      content: text.trim(),
+      date: new Date().toISOString(),
     };
     onAdd(newTweet);
     setText("");
@@ -36,7 +35,7 @@ export default function Tweet({ onAdd }) {
         <div className="tweet-error">The tweet can't contain more than 140 chars.</div>
       )}
       <div className="tweet-actions">
-            <button type="submit" onClick={handleSubmit} disabled={disabled}>
+            <button type="button" onClick={handleSubmit} disabled={disabled}>
             Tweet
             </button>
         </div>
