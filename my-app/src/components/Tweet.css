@@ -1,0 +1,100 @@
+.tweet-form {
+  background: transparent;
+  border: 1px solid #334155;    
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 18px;
+}
+
+.tweet-form textarea {
+  width: 100%;
+  min-height: 140px;
+  background: transparent;
+  border: none;
+  color: lightgrey;
+  resize: vertical;
+  font-size: 16px;
+  outline: none;
+}
+
+
+.tweet-error {
+  margin-top: 8px;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid red;
+  color: lightpink;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+
+.tweet-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.tweet-actions .count {
+  color: lightgray;              
+  font-size: 14px;
+}
+
+.tweet-actions .count.over {
+  color: red;            
+}
+
+.tweet-actions button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;         
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tweet-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.tweets-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;                   
+}
+
+
+.tweet {
+  background: #1f2937;        
+  padding: 14px;
+  border-radius: 10px;
+}
+
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  color: lightgray;             
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+
+.tweet .text {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 520px) {
+  .container { padding: 0 10px; }
+  .tweet-form textarea { min-height: 120px; }
+}
