@@ -2,9 +2,9 @@ import { useState } from "react";
 import './Tweet.css'
 
 const MAX_LEN = 140;
-const USERNAME = "OR";
 
-export default function Tweet({ onAdd}) {
+
+export default function Tweet({ onAdd, userName="username"}) {
   const [text, setText] = useState("");
 
   const remaining = MAX_LEN - text.length;
@@ -16,7 +16,7 @@ export default function Tweet({ onAdd}) {
     if (disabled) return;
 
     const newTweet = {
-      userName: USERNAME,
+      userName: userName,
       content: text.trim(),
       date: new Date().toISOString(),
     };

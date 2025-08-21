@@ -1,0 +1,12 @@
+.profile-title { font-size: 32px; margin: 24px 0 12px; }
+.profile-form { max-width: 720px; }
+.profile-label { display:block; margin-bottom:8px; color:#cbd5e1; }
+.profile-input {
+  width:100%; padding:12px 14px; border-radius:8px;
+  border:1px solid #334155; background:transparent; color:#e5e7eb;
+}
+.profile-save {
+  margin-top:12px; padding:8px 14px; border:0; border-radius:8px;
+  background:#3b82f6; color:#fff; font-weight:600; cursor:pointer;
+}
+.profile-hint { color:#9ca3af; margin-top:8px; }

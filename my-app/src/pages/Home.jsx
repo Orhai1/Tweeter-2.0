@@ -8,6 +8,7 @@ function Home() {
 
     const [tweets, setTweets] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [userName] = useState(() => localStorage.getItem("username"));
     
     async function fetchTweets() {
         setLoading(true);
@@ -47,7 +48,7 @@ function Home() {
   return (
     <div className="container">
       {loading && <div className="loading">Loading…</div>}
-      <Tweet onAdd={handleAdd}/>
+      <Tweet onAdd={handleAdd} userName={userName}/>
 
       <ul className="tweets-list">
         {tweets.map(t => (

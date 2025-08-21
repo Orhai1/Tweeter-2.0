@@ -1,0 +1,21 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #111827;
+  border-bottom: 1px solid #2d3748;
+}
+.nav-inner {
+  width: min(1200px, 94vw);
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  gap: 16px;
+}
+.nav-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.nav-link.active { background: #1f2937; color: #fff; }
